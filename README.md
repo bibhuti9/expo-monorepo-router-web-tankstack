@@ -1,4 +1,10 @@
-# expo-mono-router-web
-# expo-monorepo-app
-# expo-mono-router-web
-# expo-mono-router-web
+# Expo monorepo App 🙌.
+
+```
+* Expo router
+* Expo web
+* Next.js
+* Shared API
+* API calling
+* State management ( Mobx )
+```
