@@ -1,4 +1,4 @@
-# Expo monorepo App 🙌.
+# Expo Universal App Using Monorepo 🙌.
 
 ```
 * Expo router
