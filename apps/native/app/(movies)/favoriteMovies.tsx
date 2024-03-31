@@ -8,6 +8,7 @@ import PhotographersCard from "@/components/PhotographerCard";
 
 function favoriteMovies() {
   const favorites = store.favoritesList;
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>

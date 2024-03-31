@@ -12,12 +12,14 @@
     "packages/*"
   ],
   "dependencies": {
+    "@tanstack/react-query": "^5.28.9",
     "mobx": "^6.12.3",
     "mobx-react": "^9.1.1",
     "mobx-state-tree": "^5.4.1",
     "react-native-svg": "^15.1.0"
   },
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.28.6",
     "react-native-svg-transformer": "^1.3.0"
   }
 }

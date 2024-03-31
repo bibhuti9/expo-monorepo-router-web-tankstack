@@ -8,8 +8,9 @@ export function favoriteAction({ favorites }: StoreType) {
     }
     return favorites.set(favorite.id, favorite);
   }
-  function addFavorite(favorites: favoritesStoreStoreType[]) {
-    favorites.forEach((snapshot): void => setFavorite(snapshot));
+  function addFavorite(favorite: favoritesStoreStoreType[]) {
+    favorites.clear();
+    favorite.forEach((snapshot): void => setFavorite(snapshot));
   }
   return { setFavorite, addFavorite };
 }

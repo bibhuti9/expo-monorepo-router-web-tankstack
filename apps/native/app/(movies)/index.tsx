@@ -15,7 +15,6 @@ import { styles } from "./styles";
 
 function PhotographersList() {
   const photographers = store.photographers as moviesStoreSnapShot[];
-
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
