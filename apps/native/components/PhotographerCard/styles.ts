@@ -4,8 +4,7 @@ const { width, height } = Dimensions.get("window");
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginHorizontal: 8,
-    height: height / 3,
+    margin: 8,
     borderRadius: 10,
     shadowColor: "#000",
     shadowOffset: {
@@ -19,9 +18,7 @@ export const styles = StyleSheet.create({
     overflow: "hidden",
   },
   image: {
-    width: "auto",
-    flex: 1,
-    resizeMode: "cover",
+    alignSelf: "stretch",
   },
   heaerContainer: {
     position: "absolute",

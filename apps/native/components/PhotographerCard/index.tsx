@@ -3,8 +3,9 @@ import {
   ImageBackground,
   TouchableOpacity,
   ActivityIndicator,
+  Dimensions,
 } from "react-native";
-import React from "react";
+import React, { useMemo } from "react";
 
 import { styles } from "./styles";
 import { moviesStoreStoreType } from "@repo/utils/store/Movies";
@@ -18,9 +19,14 @@ interface PropsTypes {
   item: moviesStoreStoreType;
 }
 
+const { height } = Dimensions.get("window");
+
 function PhotographersCard({ item }: PropsTypes) {
   const queryClient = useQueryClient();
+  const randomBool = useMemo(() => Math.random() < 0.5, []);
+
   const hasFavourite = store.favorites.get(item.id);
+  const CARD_HEIGHT = randomBool ? height / 3 : height / 3.4;
 
   const addToFavourite = async () => {
     await addFavourite({
@@ -37,8 +43,11 @@ function PhotographersCard({ item }: PropsTypes) {
   });
 
   return (
-    <View style={styles.container}>
-      <ImageBackground source={{ uri: item.src.medium }} style={styles.image}>
+    <View style={[styles.container, { height: CARD_HEIGHT }]}>
+      <ImageBackground
+        source={{ uri: item.src.medium }}
+        style={[styles.image, { height: CARD_HEIGHT }]}
+      >
         {isPending ? (
           <View style={styles.loaderContainer}>
             <ActivityIndicator size={"large"} color={"#2f95dc"} />

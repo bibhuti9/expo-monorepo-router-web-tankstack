@@ -1,13 +1,12 @@
 import React from "react";
 import { Tabs } from "expo-router";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { tintColorLight } from "@/constants/Colors";
 
 export default function _layout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: tintColorLight,
+        tabBarActiveTintColor: "#2f95dc",
         headerShown: false,
       }}
     >
