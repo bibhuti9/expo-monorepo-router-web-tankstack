@@ -7,4 +7,5 @@
 * Shared API
 * API calling
 * State management ( Mobx )
+* Tankstack query
 ```
